@@ -1,0 +1,221 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.container {
+  position: relative;
+  width: 95%;
+  padding: 10px;
+  transition: background-color 1s ease;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 5px 0px;
+  text-align: left;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.toggle-column {
+  display: none;
+  width: 70px; /* Set the same width for both columns */
+  text-align: center;
+}
+
+
+input[type="number"] {
+  width: 100%;
+}
+
+input[type="text"], input[type="password"], input[type="number"] {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: calc(100% - 40px); /* Adjust width to accommodate the icon */
+  margin: 5px 0px;
+  padding: 0px;
+  color: white;
+  display: inline-block; /* Ensure the input field is displayed inline */
+  vertical-align: middle; /* Align the input field vertically with the icon */
+}
+
+.add-btn {
+  margin-bottom: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn:hover, .add-btn:hover {
+  opacity: 0.7;
+}
+
+.delete-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#generateBtn {
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 15px;
+}
+
+#output {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#alert {
+  display: none;
+  color: white;
+  margin-top: 10px;
+  position: relative;
+  text-align: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.shadow {
+  position: relative;
+  margin: 30px;
+  color: white;
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+}
+
+.shadow::before,
+.shadow::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  background: linear-gradient(45deg, #0000FF, #ff6a00, #ff0033, #00ff00, #ff00ff, #ff0000);
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  background-size: 1000%;
+  z-index: -1;
+  animation: animate 30s linear infinite;
+  opacity:0.7;
+}
+
+.shadow::after {
+  filter: blur(40px);
+  opacity:0.9;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes backgroundFade {
+    
+  0% {
+    background-color: transparent;
+  }
+  33% {
+    background-color: black;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.fade-animation {
+  animation: backgroundFade 1s ease;
+}
+
+#toggleIcon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  height: 20px;
+  width: 20px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Add this new class to your CSS */
+.custom-btn {
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 15px;
+}
+
+/* Add hover effect */
+.custom-btn:hover {
+  opacity: 0.7;
+}
+
+.copy-icon {
+  padding-right: 14px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  vertical-align: middle; /* Align the icon vertically with the input field */
+}
+
+.copy-icon:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background-color: black;
+  }
+
+  .shadow::before,
+  .shadow::after {
+    display: none;
+  }
+  
+  .shadow{
+      margin:0px;
+  }
+}
